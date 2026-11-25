@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    background-color: var(--night);
+    color-scheme: dark;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+  }
+  body {
+    @apply bg-night font-sans text-[17px] text-mist antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  ::selection {
+    background: var(--mint);
+    color: var(--ink);
+  }
+  input:-webkit-autofill {
+    -webkit-text-fill-color: var(--mist);
+    -webkit-box-shadow: 0 0 0 1000px var(--deep) inset;
+    caret-color: var(--mist);
+  }
+}
